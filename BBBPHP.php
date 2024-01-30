@@ -51,7 +51,7 @@ function createMeeting($meetingID, $meetingName, $attendeePW, $moderatorPW) {
     $params = "meetingID=$meetingID&name=$meetingName&attendeePW=$attendeePW&moderatorPW=$moderatorPW";
 
     // Add parameters for translation
-    // $params .= "";
+     $params .= "&meta_translation-enabled=true&meta_translation-source-language=hi&meta_translation-target-languages=en";
     
     $checksum = getChecksum("create", $params, $bbbSecret);
 
