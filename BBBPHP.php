@@ -49,6 +49,10 @@ function createMeeting($meetingID, $meetingName, $attendeePW, $moderatorPW) {
 
     // Prepare the string for checksum
     $params = "meetingID=$meetingID&name=$meetingName&attendeePW=$attendeePW&moderatorPW=$moderatorPW";
+
+    // Add parameters for translation
+    // $params .= "";
+    
     $checksum = getChecksum("create", $params, $bbbSecret);
 
     // Create meeting API call URL
