@@ -52,6 +52,8 @@ function createMeeting($meetingID, $meetingName, $attendeePW, $moderatorPW) {
 
     // Add parameters for translation
      $params .= "&meta_translation-enabled=true&meta_translation-source-language=hi&meta_translation-target-languages=en";
+    // Add yourLogout URL parameters
+    $params .= "&logoutURL=<your logout url>";
     
     $checksum = getChecksum("create", $params, $bbbSecret);
 
