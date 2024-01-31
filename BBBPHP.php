@@ -51,9 +51,9 @@ function createMeeting($meetingID, $meetingName, $attendeePW, $moderatorPW) {
     $params = "meetingID=$meetingID&name=$meetingName&attendeePW=$attendeePW&moderatorPW=$moderatorPW";
 
     // Add parameters for translation
-     $params .= "&meta_translation-enabled=true&meta_translation-source-language=hi&meta_translation-target-languages=en";
+      $params .= "&meta_translation-source-language=en&meta_translation-target-languages=hi&meta_translation-enabled=true";
     // Add yourLogout URL parameters
-    $params .= "&logoutURL=<your logout url>";
+    // $params .= "&logoutURL=<your logout url>";
     
     $checksum = getChecksum("create", $params, $bbbSecret);
 
